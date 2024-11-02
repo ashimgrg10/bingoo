@@ -1,0 +1,74 @@
+body {
+    background-color: skyblue; /* Set background color to sky blue */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font for better appearance */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+#game-title {
+    font-size: 2.5em; /* Set the font size for the title */
+    color: darkblue; /* Change the color to dark blue */
+    margin-bottom: 20px; /* Add some space below the title */
+    text-align: center; /* Center align the title */
+}
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; /* Stack elements vertically */
+    width: 80%; /* Width of the main container */
+    max-width: 800px; /* Maximum width for large screens */
+}
+
+#bingo-container {
+    text-align: center; /* Center text inside bingo-container */
+}
+
+#bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px; /* Adjusted gap for smaller cells */
+    margin: 20px auto; /* Center the board */
+    width: 100%; /* Make the board responsive */
+    max-width: 300px; /* Set a maximum width for the board */
+}
+
+.bingo-cell {
+    width: 50px; /* Adjust cell width */
+    height: 50px; /* Adjust cell height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* Slightly smaller font size */
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bingo-cell.marked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#drawn-number-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em; /* Make font slightly smaller */
+    background-color: gray; /* Set background color to red */
+    color: white; /* Text color white for better contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+#number-display {
+    font-size: 3em; /* Make the drawn number large */
+    font-weight: bold;
+    margin: 10px 0;
+}
